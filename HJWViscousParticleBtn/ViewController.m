@@ -22,6 +22,26 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self createEmitterLayer];
     
+    [self createGradientLayer];
+    
+    self.btn = [[HJWViscousParticleBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    [self.btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    self.btn.center = self.view.center;
+    self.btn.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithRed: 0.608 green: 0.612 blue: 0.965 alpha: 1];
+    
+    
+    [self.view addSubview:self.btn];
+    
+    [self.btn startAnimation];
+}
+
+- (void)btnAction {
+    NSLog(@"%@", @"吹牛皮的孩子");
+}
+
+// 创建渐变背景
+- (void)createGradientLayer {
     //初始化CAGradientlayer对象，使它的大小为UIView的大小
     self.gradientLayer = [CAGradientLayer layer];
     self.gradientLayer.frame = self.view.bounds;
@@ -40,22 +60,9 @@
     //设置颜色分割点（范围：0-1）
     self.gradientLayer.locations = @[@(0.01f), @(0.25f), @(0.5f), @(0.75f), @(1.0f)];
     
-    self.btn = [[HJWViscousParticleBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [self.btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
-    self.btn.center = self.view.center;
-    self.btn.backgroundColor = [UIColor clearColor];
-    self.view.backgroundColor = [UIColor colorWithRed: 0.608 green: 0.612 blue: 0.965 alpha: 1];
-    
-    
-    [self.view addSubview:self.btn];
-    
-    [self.btn startAnimation];
 }
 
-- (void)btnAction {
-    NSLog(@"%@", @"吹牛皮的孩子");
-}
-
+// 创建背景粒子
 - (void)createEmitterLayer {
     // 创建粒子Layer
     CAEmitterLayer *snowEmitter = [CAEmitterLayer layer];
@@ -129,7 +136,9 @@
     snowEmitter.mask    = _movedMask;
     
     // 拖拽的View
-    UIView *dragView = [[UIView alloc] initWithFrame:(CGRect){CGPointZero, image.size}];
+    UIView *dragView =
+    [[UIView alloc] initWithFrame:(CGRect){CGPointZero, image.size.width + 50, image.size.height + 50}];
+    dragView.userInteractionEnabled = YES;
     dragView.center  = self.view.center;
     [self.view addSubview:dragView];
     
