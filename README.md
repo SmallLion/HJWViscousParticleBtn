@@ -3,8 +3,11 @@
 - 🍩 A Single ViscousParticleBtn for iOS.
 - 一款优雅的甜甜圈按钮
 
-# eg
- ![HJWViscousParticleBtn set up - 140](http://ofaxaig0m.bkt.clouddn.com/HJWViscousParticleBtn.gif)
+
+# Previe 
+
+![HJWViscousParticleBtn set up-w140](http://ofaxaig0m.bkt.clouddn.com/HJWViscousParticleBtn.gif)
+
 
 # Usage
 ## **ViewController :**
