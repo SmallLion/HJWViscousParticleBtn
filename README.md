@@ -3,6 +3,9 @@
 - 🍩 A Single ViscousParticleBtn for iOS.
 - 一款优雅的甜甜圈按钮
 
+# eg
+ ![HJWViscousParticleBtn set up - 140](http://ofaxaig0m.bkt.clouddn.com/HJWViscousParticleBtn.gif)
+
 # Usage
 ## **ViewController :**
 
@@ -132,5 +135,7 @@
 ```
 
 # issue
-### 在尝试将粒子与甜甜圈能够产生相互的影响，比如粒子穿叠过甜甜圈、类似粘性的分离等等。
-### 希望大家给予这些方面的想法和建议
+#### 在尝试将粒子与甜甜圈能够产生相互的影响，比如粒子穿叠过甜甜圈、类似粘性的分离等等。
+#### 希望大家可以给予这些方面的想法和建议
+
+
