@@ -30,7 +30,6 @@
     self.btn.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor colorWithRed: 0.608 green: 0.612 blue: 0.965 alpha: 1];
     
-    
     [self.view addSubview:self.btn];
     
     [self.btn startAnimation];

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HJWViscousParticleBtn : UIButton
+
 - (void)startAnimation;
 
 - (void)stopAnimation;
